@@ -3,6 +3,13 @@ const app=express();
 const path = require('path');
 const PORT=process.env.PORT || 3500;
 
+//Buildin middlware to handle urlencoded data,in other words,form data
+//'content-Type: application/x-www-form-urlencoded'
+
+app.use(express.urlencoded({extended:false}));
+
+
+
 app.get('^/$|/index(.html)?',(req,res)=>{
     // res.sendFile('./views/index.html',{root:__dirname});
     res.sendFile('./views/index.html',{root:__dirname});
