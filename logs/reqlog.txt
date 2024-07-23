@@ -1,0 +1,7 @@
+20240723	23:20:09	8ef8d002-b6f7-46ac-93fc-59679935d24b	GET	undefined	/css/style.css
+20240723	23:20:12	af75c1d3-1524-45fd-b574-e671099f4202	GET	undefined	/
+20240723	23:20:12	ec1ef538-2e4a-44ea-b9b2-23c3da260d70	GET	undefined	/css/style.css
+20240723	23:28:47	c9a514d1-d60b-4bab-9479-6fa62c5bc750	GET	undefined	/
+20240723	23:28:47	6d577330-5169-475f-92c4-0b7607175434	GET	undefined	/css/style.css
+20240723	23:31:20	755cb163-81b1-4e04-bcce-87c3d655bd6e	OPTIONS	https://www.google.com	/
+20240723	23:31:20	c69302ce-aff6-48ac-a622-28abc3e0ce92	GET	https://www.google.com	/

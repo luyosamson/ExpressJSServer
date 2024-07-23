@@ -1,14 +1,23 @@
 const express=require('express');
 const app=express();
 const path = require('path');
+const {logger}=require('./middleware/logEvents');
 const PORT=process.env.PORT || 3500;
+
+//Custom middleware logger
+app.use(logger);
 
 //Buildin middlware to handle urlencoded data,in other words,form data
 //'content-Type: application/x-www-form-urlencoded'
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));//Middleware for handling url encoded data-form data
 
+//build-in middleware for json
+app.use(express.json());
 
+//serving static file
+//The below public route will be serched before other routes
+app.use(express.static(path.join(__dirname,'/public')));
 
 app.get('^/$|/index(.html)?',(req,res)=>{
     // res.sendFile('./views/index.html',{root:__dirname});
@@ -59,7 +68,7 @@ app.get('/*',(req,res)=>{
     res.status(404).sendFile(path.join(__dirname,'views','404.html'));//302 by default
 
 })
-
+ 
 
 
 
